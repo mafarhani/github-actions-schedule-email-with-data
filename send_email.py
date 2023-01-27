@@ -8,6 +8,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 from pathlib import Path
 from  dotenv import load_dotenv
+
 # Download the CSV file from the URL
 url = "http://agridata.tn/dataset/4bb3d668-6c9b-4072-ad56-1eb9119091af/resource/8d70196c-a95e-4a04-9c61-8144b4b60a18/download/barrages.csv"
 response = requests.get(url)
