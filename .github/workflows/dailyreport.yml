@@ -8,8 +8,15 @@ on:
 
 
 jobs:
-  my-job:
+  build:
       runs-on: ubuntu-latest
       steps:
-        - name: first-step
-          run: echo "hello world"
+        - uses: action/checkout@v2
+        - uses: actions/setup-pythons@v2
+          with:
+            python-version: 3.x
+        - name: Run email code
+          env:
+            sender_email: ${{ secrets.sender_email}} 
+            password: ${{ secrets.password}} 
+          run: python send_email.py
