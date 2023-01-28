@@ -15,6 +15,6 @@ jobs:
             python-version: 3.x
         
         - name: Run email code
-          run: pip install -r docs/doc-requirements.txt
+          run: pip install -r docs/requirements.txt
                python send_email.py
             
