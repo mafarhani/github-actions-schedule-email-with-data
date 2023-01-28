@@ -15,8 +15,8 @@ response = requests.get(url)
 #envars = current_dir /".env"
 #load_dotenv(envars)
 
-sender_email=os.environ.get("EMAIL")
-password=os.environ.get("PASSWORD")
+sender_email="barometertnbybig4partners@gmail.com"        #os.environ.get("EMAIL")
+password="mvnezctznpbwziru"            #os.environ.get("PASSWORD")
 
 
 
@@ -42,6 +42,5 @@ msg.attach(part)
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
     smtp.login(sender_email, password)
-    smtp.sendmail(sender_email,sender_email, msg.as_string())
     smtp.sendmail(sender_email,sender_email, msg.as_string())
     smtp.quit()  
