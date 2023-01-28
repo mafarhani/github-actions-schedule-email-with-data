@@ -15,3 +15,4 @@ jobs:
             python-version: 3.x
         - name: Run email code
           run: python send_email.py
+               CI=False
