@@ -13,10 +13,8 @@ jobs:
         - uses: actions/setup-python@v3
           with:
             python-version: 3.x
-        python:
-          install:
-           - requirements: docs/requirements.txt
-           - method: setuptools
+        
         - name: Run email code
-          run: python send_email.py
+          run: pip install -r docs/doc-requirements.txt
+               python send_email.py
             
