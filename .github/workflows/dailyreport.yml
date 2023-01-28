@@ -13,6 +13,7 @@ jobs:
         - uses: actions/setup-python@v3
           with:
             python-version: 3.x
+            pip install -r requirments.txt
         - name: Run email code
           run: python send_email.py
                CI=False
