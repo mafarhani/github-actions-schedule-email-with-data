@@ -6,6 +6,12 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 from pathlib import Path
+
+try:
+    import requests
+except ImportError:
+    os.system('apt-get install python3')
+    os.system('pip3 install requests')
 #from  dot_env import load_dotenv
 
 # Download the CSV file from the URL
