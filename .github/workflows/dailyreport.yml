@@ -1,7 +1,7 @@
 name: daily-report
 on:
   schedule:
-    - cron: '0 8 * * 1-7' # Runs every weekday (Monday through Friday) at 8:00 AM
+    - cron: '0 8 * * *' # Runs every weekday (Monday through Friday) at 8:00 AM
   workflow_dispatch:
 jobs:
   run_script:
