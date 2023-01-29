@@ -28,13 +28,13 @@ password="mvnezctznpbwziru"            #os.environ.get("PASSWORD")
 # Download the CSV file from the URL
 #url = "http://agridata.tn/dataset/4bb3d668-6c9b-4072-ad56-1eb9119091af/resource/8d70196c-a95e-4a04-9c61-8144b4b60a18/download/barrages.csv"
 #response = requests.get(url)
-url="https://data.unhcr.org/population/get/timeseries?export=csv&widget_id=369680&geo_id=656&sv_id=11&population_group=4908&frequency=day&fromDate=1900-01-01"
+url="http://agridata.tn/dataset/4bb3d668-6c9b-4072-ad56-1eb9119091af/resource/8d70196c-a95e-4a04-9c61-8144b4b60a18/download/barrages.csv"
 response = requests.get(url)
 # Create the email message
 msg = MIMEMultipart()
 msg["From"] = sender_email
 msg["To"] = sender_email
-msg["Subject"] = "UNHCR DATA ya FANNEN"
+msg["Subject"] = "Donnees Situation des barrages"
 
 # Attach the CSV file to the email
 part = MIMEBase("application", "octet-stream")
